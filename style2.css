@@ -1,0 +1,76 @@
+
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-color: #f4c162; 
+  }
+
+  #game,
+  #toplista,
+  #endgame,
+  #Manual,
+  #menu {
+    font-size: 2em;
+    text-align: center;
+    padding: 40px;
+    background: #ffffff;
+    border: 3px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  #Manual{
+    text-align:left;
+  }
+  #up,
+  #right,
+  #left {
+    margin: 10px 0;
+  }
+
+  button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #e09a1a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #632d00;
+  }
+
+  input {
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  #errors {
+    color: red;
+    font-weight: bold;
+  }
+
+  #gameBoard td {
+    background-color: yellow;
+    width: 100px;  
+    height: 100px;
+    overflow: hidden;  
+    border: 1px solid black;  /
+}
+
+#gameBoard {
+    border: 1px solid black;
+    display: table;
+    width: auto;  
+    margin: 0 auto;  
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Railways</title>
+      <link rel="stylesheet" href="style2.css">
+  
+</head>
+
+<body>
+  <div id="menu">
+    <h1>RailWays</h1>
+    <div id="up">
+    <p>Add meg a neved!</p>
+    <input id='writtenname'type="text" placeholder="Pelda Bela"></input>
+    </div>
+
+    <section id="right">
+    <button id="manual">Feladatleiras</button>
+    <button id="start">Jatek inditasa</button>
+        </section>
+        
+    <section id="left">
+        <button id="easy">Konnyu</button>
+        <button id="hard">Nehez</button>
+
+
+    </section>
+    <p id="errors"></p>
+</div>
+
+<div id="Manual" hidden>
+    <section>
+
+    <p>A játék különböző méretű négyzetrácsos hálón játszódhat, ahol a célunk az, hogy egy összefüggő körvasútvonalat alkossunk úgy, hogy minden olyan helyre eljusson a vonat, ahova lehetséges.</p>
+    <p>A térképen több különböző típusú mező található, melyek a játék kezdetén látszódnak a térképen:</p>
+    <ul>
+      <li>Üres mező : Ebben a cellában a vasútvonal a belépési irányon kívül maradék három irányba tud haladni. </li>
+      <li>Híd mező : Ezen a mezőn a vasútvonalat csak a híd által megadott egyenes írányban lehet megépíteni.</li>
+      <li>Hegy mező : Ezeken a mezőkön a sziklák a cellának két szomszédos kijáratát lezárják, így csak 90°-ban elfordulva lehet továbbhaladni.</li>
+      <li>Oázis mező : Erre a cellára nem lehet vasutat építeni.</li>
+    </ul>
+    <p>A játéknak akkor van vége, amikor a játékos a megadott szabályokat betartva elkészíti a feladvány helyes megoldását. A játék során a feladvány teljesítésének ellenőrzése során a következő elemekre kell odafigyelni:</p>
+    <ul>
+      <li>Minden cellából két irányba lehet menni, és azokba a cellákba amelybe továbbhalad, a megfelelő irányból be lehet érkezni.</li>
+      <li>Minden olyan mezőt, amit érinteni kell, érintünk</li>
+      <li>Minden olyan mezőt, amire nem lehet építeni, üresen maradt.</li>
+      </ul>
+    <button id="backmanual"> Vissza</button>
+
+
+    </section>
+
+
+
+
+</div>
+
+
+      
+
+<div id="game" hidden>
+        <h3>ÚTVONALTERVEZŐ:</h3>
+        <h2 id="jatekosname"></h2>
+        <h3>ELTELT IDŐ:</h3>
+        <span id="time">0:00</span>
+        <table id="gameBoard"></table>
+
+
+</div>
+
+<div id="endgame" hidden>
+
+ <h2>Játék Vége</h2>
+ <h3 id="finishedtime"></h3>
+ <button id="toscoreboard">Tovább</button>
+
+</div>
+
+
+
+
+<div id='toplista' hidden>
+        <h2>|Toplista|</h2>
+        <h3>5x5</h3>
+        <div id='lista'>
+        </div>
+        <h3>7x7</h3>
+        <div id="listahard"></div>
+        
+        <button id="backscoreboard">Vissza a menure</button>
+ </div>
+      <script src="szkript.js"></script>
+</body>
+</html>
