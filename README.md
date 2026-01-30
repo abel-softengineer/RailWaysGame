@@ -1,20 +1,46 @@
-Projektrol
+🚂 A Királyság Vasúthálózata (Railways Game)
 
-Ez egy javascriptben íródott 2 dimenziós felülnézetes játék, amit lehet telefonról is használni.
+Próbáld ki itt: abel-softengineer.github.io/RailWaysGame/
 
-Jatekrol
+Ez egy JavaScript nyelven íródott, 2 dimenziós logikai játék, amelyben Nevenincs király birodalmának vasúthálózatát kell megtervezned. A projekt az ELTE Webprogramozás kurzus keretében készült, teljesítve az összes funkcionális és minőségi követelményt.
+🎮 A játék lényege
 
-A játék különböző méretű négyzetrácsos hálón játszódhat, ahol a célunk az, hogy egy összefüggő körvasútvonalat alkossunk úgy, hogy minden olyan helyre eljusson a vonat, ahova lehetséges.
+A cél egy összefüggő, önmagába visszatérő körvasútvonal kiépítése. A vonal sehol nem ágazhat el, nem keresztezheti önmagát, és minden lehetséges mezőt érintenie kell.
+🗺️ Speciális mezőtípusok
 
-A térképen több különböző típusú mező található, melyek a játék kezdetén látszódnak a térképen:
+    Híd: A vasút csak egyenesen haladhat át rajta.
 
-    Üres mező : Ebben a cellában a vasútvonal a belépési irányon kívül maradék három irányba tud haladni.
-    Híd mező : Ezen a mezőn a vasútvonalat csak a híd által megadott egyenes írányban lehet megépíteni.
-    Hegy mező : Ezeken a mezőkön a sziklák a cellának két szomszédos kijáratát lezárják, így csak 90°-ban elfordulva lehet továbbhaladni.
-    Oázis mező : Erre a cellára nem lehet vasutat építeni.
+    Hegy: A sziklák miatt a vasútvonalnak 90°-ban el kell kanyarodnia.
 
-A játéknak akkor van vége, amikor a játékos a megadott szabályokat betartva elkészíti a feladvány helyes megoldását. A játék során a feladvány teljesítésének ellenőrzése során a következő elemekre kell odafigyelni:
+    Oázis: Erre a területre nem építhető vasútvonal.
 
-    Minden cellából két irányba lehet menni, és azokba a cellákba amelybe továbbhalad, a megfelelő irányból be lehet érkezni.
-    Minden olyan mezőt, amit érinteni kell, érintünk
-    Minden olyan mezőt, amire nem lehet építeni, üresen maradt.
+    Üres mező: Bármilyen irányú vasútelem lehelyezhető.
+🕹️ Irányítás és interakció
+
+A játékot úgy terveztük, hogy minden platformon intuitív legyen:
+
+    Sín lehelyezése: Egyszerű kattintással (vagy érintéssel). A cellákra kattintva a program ciklikusan váltogat a különböző kanyarodási és egyenes irányok között.
+
+    Intelligens elhelyezés: A rendszer figyelembe veszi a mező típusát (Híd, Hegy), így csak az oda illő sínformákat engedi váltogatni.
+
+    Ellenőrzés: Amint a játékos úgy érzi, hogy végzett, a rendszer automatikusan (vagy gombnyomásra) validálja a pályát a megadott szabályok szerint.
+
+🚀 Főbb funkciók
+
+    Választható nehézség: 5x5-ös (könnyű) és 7x7-es (nehéz) pályák véletlenszerű sorsolással.
+
+    Valós idejű visszajelzés: Időmérés és a szabályok automatikus ellenőrzése a játék végén.
+
+    LocalStorage támogatás: A toplisták és a játék állapota böngészőfrissítés után is megmaradnak.
+
+    Mobilbarát kialakítás: A felület teljesen reszponzív, érintőképernyőn is kényelmesen játszható.
+
+🛠️ Technikai megvalósítás
+
+    Nyelv: Modern Vanilla JavaScript (ES6+).
+
+    Design: CSS-sel megvalósított sötét mód, rugalmas elrendezéssel.
+
+    Architektúra: Egyetlen HTML fájlon belüli nézetváltás (Menü/Játék/Leírás) JavaScript vezérléssel.
+
+    Kódminőség: A projekt kerüli a bad practice megoldásokat (nincs var, nincsenek inline eseménykezelők).
